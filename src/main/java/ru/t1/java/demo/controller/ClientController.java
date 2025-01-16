@@ -8,7 +8,7 @@ import ru.t1.java.demo.aop.HandlingResult;
 import ru.t1.java.demo.aop.Track;
 import ru.t1.java.demo.aop.LogException;
 import ru.t1.java.demo.exception.ClientException;
-import ru.t1.java.demo.service.ClientService;
+import ru.t1.java.demo.service.client.ClientService;
 
 import java.io.IOException;
 
@@ -24,14 +24,13 @@ public class ClientController {
     @GetMapping(value = "/client")
     @HandlingResult
     public void doSomething() throws IOException, InterruptedException {
-//        try {
-//            clientService.parseJson();
+        try {
+            clientService.parseJson();
         Thread.sleep(3000L);
-        throw new ClientException();
-//        } catch (Exception e) {
-//            log.info("Catching exception from ClientController");
-//            throw new ClientException();
-//        }
+        } catch (Exception e) {
+            log.info("Catching exception from ClientController");
+            throw new ClientException();
+        }
     }
 
 }

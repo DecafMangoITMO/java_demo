@@ -1,4 +1,4 @@
-package ru.t1.java.demo.service;
+package ru.t1.java.demo.service.client;
 
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
