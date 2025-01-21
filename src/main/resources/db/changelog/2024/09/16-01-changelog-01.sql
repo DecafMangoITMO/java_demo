@@ -1,7 +1,7 @@
 -- liquibase formatted sql
 
 -- changeset e_cha:1726476397331-1
-CREATE SEQUENCE IF NOT EXISTS client_seq START WITH 1 INCREMENT BY 50;
+CREATE SEQUENCE IF NOT EXISTS client_seq START WITH 1 INCREMENT BY 1;
 
 -- changeset e_cha:1726476397331-2
 CREATE TABLE client

@@ -14,7 +14,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Table(name = "transaction")
 @ToString
-public class Transaction extends AbstractPersistable<Long> {
+public class Transaction  {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_seq")
+    @SequenceGenerator(name = "transaction_seq", allocationSize = 1)
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "account_id")

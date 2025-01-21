@@ -12,7 +12,12 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 @AllArgsConstructor
 @Table(name = "account")
 @ToString
-public class Account extends AbstractPersistable<Long> {
+public class Account {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "account_seq")
+    @SequenceGenerator(name = "account_seq", allocationSize = 1)
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "client_id")
