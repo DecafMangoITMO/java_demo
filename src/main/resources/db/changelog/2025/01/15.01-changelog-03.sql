@@ -1,0 +1,7 @@
+CREATE SEQUENCE IF NOT EXISTS transaction_seq START WITH 1 INCREMENT BY 1;
+
+CREATE TABLE transaction
+(
+    id BIGINT NOT NULL,
+    CONSTRAINT pk_transaction PRIMARY KEY (id)
+);

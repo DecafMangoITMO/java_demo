@@ -1,14 +1,16 @@
 package ru.t1.java.demo.aop;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
 import ru.t1.java.demo.model.Client;
+import ru.t1.java.demo.model.DataSourceErrorLog;
+import ru.t1.java.demo.repository.DataSourceErrorLogRepository;
 
+import java.util.Arrays;
 import java.util.List;
 
 import static java.util.Objects.isNull;
@@ -17,7 +19,10 @@ import static java.util.Objects.isNull;
 @Aspect
 @Component
 @Order(0)
+@RequiredArgsConstructor
 public class LogAspect {
+
+    private final DataSourceErrorLogRepository dataSourceErrorLogRepository;
 
     @Pointcut("within(ru.t1.java.demo.*)")
     public void loggingMethods() {
@@ -30,7 +35,7 @@ public class LogAspect {
         log.info("ASPECT BEFORE ANNOTATION: Call method: {}", joinPoint.getSignature().getName());
     }
 
-//    @Before("execution(public * ru.t1.java.demo.service.ClientService.*(..))")
+//    @Before("execution(public * ru.t1.java.demo.service.client.ClientService.*(..))")
 //    public void logBefore(JoinPoint joinPoint) {
 //        log.error("ASPECT BEFORE: Call method: {}", joinPoint.getSignature().getName());
 //    }
@@ -51,6 +56,20 @@ public class LogAspect {
 
         result = isNull(result) ? List.of() : result;
 
+    }
+
+    @AfterThrowing(
+            pointcut = "@annotation(LogDataSourceError)",
+            throwing = "e"
+    )
+    public void logDataSourceError(JoinPoint joinPoint, Exception e) {
+        DataSourceErrorLog dataSourceErrorLog = DataSourceErrorLog.builder()
+                .stackTrace(Arrays.toString(e.getStackTrace()))
+                .message(e.getMessage())
+                .methodSignature(joinPoint.getSignature().getName())
+                .build();
+
+        dataSourceErrorLogRepository.save(dataSourceErrorLog);
     }
 
 }
