@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ru.t1.java.demo.aop.LogDataSourceError;
+import ru.t1.java.demo.aop.Metric;
 import ru.t1.java.demo.dto.AccountDto;
 import ru.t1.java.demo.exception.AccountException;
 import ru.t1.java.demo.exception.ClientException;
@@ -44,6 +45,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     @LogDataSourceError
+    @Metric(intervalInMillis = 50)
     public List<AccountDto> getAll() {
         log.info("Call method getAll");
 

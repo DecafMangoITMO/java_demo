@@ -6,9 +6,13 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import ru.t1.java.demo.dto.DataSourceErrorLogDto;
+import ru.t1.java.demo.dto.MetricsDto;
+import ru.t1.java.demo.kafka.KafkaMetricProducer;
 import ru.t1.java.demo.model.Client;
 import ru.t1.java.demo.model.DataSourceErrorLog;
 import ru.t1.java.demo.repository.DataSourceErrorLogRepository;
+import ru.t1.java.demo.util.DataSourceErrorLogMapper;
 
 import java.util.Arrays;
 import java.util.List;
@@ -23,6 +27,8 @@ import static java.util.Objects.isNull;
 public class LogAspect {
 
     private final DataSourceErrorLogRepository dataSourceErrorLogRepository;
+
+    private final KafkaMetricProducer kafkaMetricProducer;
 
     @Pointcut("within(ru.t1.java.demo.*)")
     public void loggingMethods() {
@@ -69,7 +75,11 @@ public class LogAspect {
                 .methodSignature(joinPoint.getSignature().getName())
                 .build();
 
-        dataSourceErrorLogRepository.save(dataSourceErrorLog);
+        try {
+            kafkaMetricProducer.send(DataSourceErrorLogMapper.toDto(dataSourceErrorLog));
+        } catch (Exception ex) {
+            dataSourceErrorLogRepository.save(dataSourceErrorLog);
+        }
     }
 
 }
