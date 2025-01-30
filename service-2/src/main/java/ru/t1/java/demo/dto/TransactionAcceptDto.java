@@ -1,0 +1,27 @@
+package ru.t1.java.demo.dto;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
+
+import java.time.LocalDateTime;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonIgnoreProperties(ignoreUnknown = true)
+@ToString
+public class TransactionAcceptDto {
+    @JsonProperty("client_id")
+    private String clientId;
+    @JsonProperty("account_id")
+    private String accountId;
+    @JsonProperty("transaction_id")
+    private String transactionId;
+    private LocalDateTime time;
+    @JsonProperty("transaction_amount")
+    private double transactionAmount;
+    @JsonProperty("account_balance")
+    private double accountBalance;
+}

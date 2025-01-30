@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1bd9b291-e385-49ce-b930-4d098a70e2f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/service-1/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/dto/TransactionAcceptDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/dto/TransactionResultDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/kafka/KafkaTransactionAcceptProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/kafka/KafkaTransactionResultConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/model/AccountStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/model/TransactionStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/repository/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/service/transaction/impl/TransactionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/26.01-changelog-01.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/26.01-changelog-02.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/26.01-changelog-03.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/T1JavaDemoService2Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/config/KafkaConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/dto/TransactionAcceptDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/dto/TransactionResultDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/kafka/KafkaTransactionAcceptConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/kafka/KafkaTransactionAcceptProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/kafka/KafkaTransactionResultProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/model/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/model/AccountStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/model/BalanceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/model/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/model/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/model/TransactionStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/repository/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/repository/TransactionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/service/transaction/TransactionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/service/transaction/impl/TransactionAcceptService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-2/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/T1JavaDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/T1JavaDemoService1Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/aop/HandlingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/aop/HandlingResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/aop/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/aop/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/aop/LogDataSourceError.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/aop/LogDataSourceError.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/aop/LogException.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/aop/LogException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/aop/LogExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/aop/LogExecution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/aop/Metric.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/aop/Metric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/aop/Track.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/aop/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/aop/TrackingAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/aop/TrackingAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/config/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/controller/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/dto/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/dto/AccountDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/dto/ClientDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/dto/ClientDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/dto/DataSourceErrorLogDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/dto/DataSourceErrorLogDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/dto/LogErrorOrMetrics.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/dto/LogErrorOrMetrics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/dto/MetricsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/dto/MetricsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/dto/TransactionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/dto/TransactionDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/exception/AccountException.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/exception/AccountException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/exception/ClientException.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/exception/ClientException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/exception/GlobalControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/exception/GlobalControllerAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/exception/TransactionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/exception/TransactionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/kafka/KafkaAccountConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/kafka/KafkaAccountConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/kafka/KafkaClientConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/kafka/KafkaClientConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/kafka/KafkaClientProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/kafka/KafkaClientProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/kafka/KafkaMetricConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/kafka/KafkaMetricConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/kafka/KafkaMetricProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/kafka/KafkaMetricProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/kafka/KafkaTransactionConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/kafka/KafkaTransactionConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/model/BalanceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/model/BalanceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/model/DataSourceErrorLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/model/DataSourceErrorLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/repository/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/repository/DataSourceErrorLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/repository/DataSourceErrorLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/repository/TransactionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/service/account/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/service/account/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/service/account/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/service/account/impl/AccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/service/client/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/service/client/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/service/client/LegacyClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/service/client/LegacyClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/service/client/impl/ClientServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/service/client/impl/ClientServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/service/transaction/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/service/transaction/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/service/transaction/impl/TransactionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/util/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/util/AccountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/util/ClientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/util/ClientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/util/DataSourceErrorLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/util/DataSourceErrorLogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/t1/java/demo/util/TransactionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/util/TransactionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MOCK_DATA.json" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/MOCK_DATA.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2024/09/16-01-changelog-01.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2024/09/16-01-changelog-01.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2024/09/16-01-changelog-02.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2024/09/16-01-changelog-02.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2025/01/15.01-changelog-01.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/15.01-changelog-01.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2025/01/15.01-changelog-02.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/15.01-changelog-02.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2025/01/15.01-changelog-03.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/15.01-changelog-03.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2025/01/15.01-changelog-04.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/15.01-changelog-04.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2025/01/15.01-changelog-05.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/15.01-changelog-05.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2025/01/15.01-changelog-06.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/15.01-changelog-06.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/2025/01/15.01-changelog-07.sql" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/2025/01/15.01-changelog-07.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/service-1/src/main/resources/db/changelog/db.changelog-master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/t1/java/demo/T1JavaDemoApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="task_1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DecafMangoITMO&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DecafMangoITMO/java_demo.git&quot;,
+    &quot;accountId&quot;: &quot;1811dd47-fb04-44a8-8b8d-549a5e87859c&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2s2wYv3bOKf6d0mQrOd4y3zih0v" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.T1JavaDemoApplication (1).executor": "Run",
+    "Spring Boot.T1JavaDemoApplication (2).executor": "Run",
+    "Spring Boot.T1JavaDemoApplication.executor": "Run",
+    "Spring Boot.T1JavaDemoService1Application.executor": "Run",
+    "Spring Boot.T1JavaDemoService2Application.executor": "Run",
+    "git-widget-placeholder": "task__3",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/decafmango/IdeaProjects/java_demo/service-2/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service-2/src" />
+      <recent name="$PROJECT_DIR$/common/src" />
+      <recent name="$PROJECT_DIR$/service_1" />
+      <recent name="$PROJECT_DIR$/service_2" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service-1" />
+      <recent name="$PROJECT_DIR$/service-1/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/service_1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.T1JavaDemoService1Application">
+    <configuration name="T1JavaDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="t1-java-demo-service-1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.t1.java.demo.T1JavaDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T1JavaDemoService1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="t1-java-demo-service-1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.t1.java.demo.T1JavaDemoService1Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T1JavaDemoService1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="t1-java-demo-service-1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.t1.java.demo.T1JavaDemoService1Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.t1.java.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T1JavaDemoService2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="t1-java-demo-service-2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.t1.java.demo.T1JavaDemoService2Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.t1.java.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.T1JavaDemoService2Application" />
+      <item itemvalue="Spring Boot.T1JavaDemoService1Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.T1JavaDemoService1Application" />
+        <item itemvalue="Spring Boot.T1JavaDemoService2Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.117" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.117" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bd9b291-e385-49ce-b930-4d098a70e2f2" name="Changes" comment="" />
+      <created>1737667028239</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737667028239</updated>
+      <workItem from="1737667029329" duration="3625000" />
+      <workItem from="1737670668854" duration="14437000" />
+      <workItem from="1737916735000" duration="10037000" />
+      <workItem from="1737982229381" duration="6331000" />
+      <workItem from="1738005944570" duration="3000" />
+      <workItem from="1738159305518" duration="13329000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-1/src/main/java/ru/t1/java/demo/kafka/KafkaTransactionResultProducer.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-2/src/main/java/ru/t1/java/demo/service/transaction/impl/TransactionAcceptService.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
