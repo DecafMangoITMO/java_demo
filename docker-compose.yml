@@ -3,7 +3,7 @@ version: '1.0'
 services:
 
   postgres:
-    image: postgres:11.13
+    image: postgres:17
     container_name: t1_java_demo
     ports:
       - "5432:5432"
@@ -59,3 +59,31 @@ services:
         KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
         KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
         KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+
+  service_1_t1:
+    build: service-1
+    image: service_1_t1_image
+    container_name: service_1_t1_container
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - broker_t1
+      - broker_2_t1
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/t1_demo
+      - T1_KAFKA_BOOTSTRAP_SERVER=broker_t1:29092,broker_2_t1:29093
+
+  service_2_t1:
+    build: service-2
+    image: service_2_t1_image
+    container_name: service_2_t1_container
+    ports:
+      - "8081:8081"
+    depends_on:
+      - postgres
+      - broker_t1
+      - broker_2_t1
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/t1_demo
+      - T1_KAFKA_BOOTSTRAP_SERVER=broker_t1:29092,broker_2_t1:29093
